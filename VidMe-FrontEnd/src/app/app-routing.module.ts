@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
-import { CategoriesComponent } from './vidmelibrary/vidmelibrary.component';
+import { VidmelibraryComponent } from './vidmelibrary/vidmelibrary.component';
 import { SignupComponent } from './signup/signup.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'vidmelibrary',
-    component: CategoriesComponent
+    component: VidmelibraryComponent
   },
   {
     path: 'login',
