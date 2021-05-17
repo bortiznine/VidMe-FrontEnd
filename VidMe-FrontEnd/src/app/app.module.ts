@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { VidmelibraryComponent } from './vidmelibrary/vidmelibrary.component';
 import { HomeComponent } from './home/home.component';
 import {AppRoutingModule} from './app-routing.module';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {AppRoutingModule} from './app-routing.module';
     SignupComponent,
     LoginComponent,
     VidmelibraryComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
