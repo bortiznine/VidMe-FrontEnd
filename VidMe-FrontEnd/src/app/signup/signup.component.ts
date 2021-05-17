@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserService} from "../services/user/user.service";
+import {UserService} from '../services/user/user.service';
 
 @Component({
   selector: 'app-signup',
@@ -15,8 +15,7 @@ export class SignupComponent implements OnInit {
 
   registerUser(): void {
     const newUser = {userName: this.userName, emailAddress: this.emailAddress, password: this.password};
-    this.userService.registerUser(newUser)
-      .subscribe(response => console.log(response),err => console.log(err));
+    this.userService.registerUser(newUser);
   }
   ngOnInit(): void {
   }
