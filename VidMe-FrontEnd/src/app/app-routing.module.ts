@@ -4,6 +4,7 @@ import { LoginComponent } from './login/login.component';
 import { VidmelibraryComponent } from './vidmelibrary/vidmelibrary.component';
 import { SignupComponent } from './signup/signup.component';
 import {HomeComponent} from './home/home.component';
+import { LogoutComponent} from './logout/logout.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent
   }
 ];
 
