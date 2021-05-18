@@ -13,7 +13,10 @@ const routes: Routes = [
   },
   {
     path: 'vidmelibrary',
-    component: VidmelibraryComponent
+    component: VidmelibraryComponent,
+    children: [
+      {path: ':id', component: VidmelibraryComponent},
+    ]
   },
   {
     path: 'login',
