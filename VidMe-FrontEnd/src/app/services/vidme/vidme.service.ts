@@ -19,4 +19,16 @@ export class VidmeService {
     return this.http
       .get(`${herokuUrl}/api/vids`, requestOptions);
   }
+
+  createVid(newVid): any {
+    console.log(newVid);
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${token}`
+      }),
+    };
+    return this.http
+      .post(`${herokuUrl}/api/categories/`, newVid, requestOptions);
+  }
 }

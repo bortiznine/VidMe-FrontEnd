@@ -9,11 +9,22 @@ declare const M;
 export class VidmelibraryComponent implements OnInit {
 
   public vids: [];
+  public vidTitle: string;
+  public vidURL: string;
   constructor(private vidmeService: VidmeService) { }
 
   getVids(): any {
     this.vidmeService.getVidMe().subscribe(response => {
       this.vids = response;
+    }, err => console.log(err));
+  }
+  createVid(): any {
+    const newVid = {
+      title: this.vidTitle,
+      vidURL: this.vidURL
+    };
+    this.vidmeService.createVid(newVid).subscribe(response => {
+      this.vids = [...this.vids, response];
     }, err => console.log(err));
   }
 
