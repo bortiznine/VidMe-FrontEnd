@@ -29,6 +29,6 @@ export class VidmeService {
       }),
     };
     return this.http
-      .post(`${herokuUrl}/api/categories/`, newVid, requestOptions);
+      .post(`${herokuUrl}/api/vids`, newVid, requestOptions);
   }
 }

@@ -8,9 +8,9 @@ declare const M;
 })
 export class VidmelibraryComponent implements OnInit {
 
-  public vids: [];
+  public vids: any[];
   public vidTitle: string;
-  public vidURL: string;
+  public vidurl: string;
   constructor(private vidmeService: VidmeService) { }
 
   getVids(): any {
@@ -21,7 +21,7 @@ export class VidmelibraryComponent implements OnInit {
   createVid(): any {
     const newVid = {
       title: this.vidTitle,
-      vidURL: this.vidURL
+      vidurl: this.vidurl
     };
     this.vidmeService.createVid(newVid).subscribe(response => {
       this.vids = [...this.vids, response];
@@ -32,7 +32,7 @@ export class VidmelibraryComponent implements OnInit {
     this.getVids();
 
     if (!localStorage.getItem('currentUser')) {
-      const toastHTML = '<span>You must login to see your categories</span>';
+      const toastHTML = '<span>You must login to see your Vid Items</span>';
       M.toast({html: toastHTML});
     }
   }
