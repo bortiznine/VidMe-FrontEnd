@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import {Subject} from 'rxjs';
+import {BehaviorSubject} from 'rxjs';
 import {Router} from '@angular/router';
 
 const herokuUrl = 'https://frozen-island-43179.herokuapp.com';
@@ -10,7 +10,7 @@ const herokuUrl = 'https://frozen-island-43179.herokuapp.com';
 })
 export class UserService {
   currentUser: string;  // ADD THIS
-  searchSubject = new Subject();  // ADD THIS
+  searchSubject = new BehaviorSubject(null);  // ADD THIS
   constructor(private http: HttpClient, private router: Router) {
     console.log('user service loaded');
   }

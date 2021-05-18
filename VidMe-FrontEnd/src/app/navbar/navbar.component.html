@@ -7,7 +7,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="!this.currentUser">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="!currentUser">
 
       <li class="nav-item" >
         <a routerLink="/" class="nav-link active" aria-current="page" href="#">Home</a>
@@ -19,14 +19,14 @@
         <a routerLink="/signup" class="nav-link" href="#">Sign Up</a>
       </li>
     </ul>
-    <ul *ngIf="this.currentUser">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0" *ngIf="currentUser">
       <li class="nav-item">
         <a routerLink="/logout" class="nav-link" href="#">Log Out</a>
       </li>
       <li class="nav-item">
         <a routerLink="/vidmelibrary" class="nav-link" href="#">Vid Me Library</a>
       </li>
-      <li >Hello, {{this.currentUser}}</li>
+      <li >Hello, {{currentUser}}</li>
     </ul>
   </div>
 </nav>

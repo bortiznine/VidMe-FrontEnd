@@ -7,9 +7,9 @@ import {UserService} from '../services/user/user.service';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
-
+  currentUser: any;
   constructor(private userService: UserService) { }
-currentUser: any;
+
   ngOnInit(): void {
     this.userService.searchSubject.subscribe(currentUser => {
       this.currentUser = currentUser;
