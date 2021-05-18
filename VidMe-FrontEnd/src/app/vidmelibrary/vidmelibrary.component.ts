@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {VidmeService} from '../services/vidme/vidme.service';
+import {UserService} from "../services/user/user.service";
+import * as url from 'url';
 declare const M;
 @Component({
   selector: 'app-vidmelibrary',
@@ -21,7 +23,7 @@ export class VidmelibraryComponent implements OnInit {
   createVid(): any {
     const newVid = {
       title: this.vidTitle,
-      vidurl: this.vidurl
+      vidurl: this.vidurl,
     };
     this.vidmeService.createVid(newVid).subscribe(response => {
       this.vids = [...this.vids, response];
@@ -35,5 +37,10 @@ export class VidmelibraryComponent implements OnInit {
       const toastHTML = '<span>You must login to see your Vid Items</span>';
       M.toast({html: toastHTML});
     }
+  }
+
+  deleteVid(vid): void {
+    this.vidmeService.deleteVid(this.vids);
+    console.log(vid);
   }
 }

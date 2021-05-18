@@ -31,4 +31,14 @@ export class VidmeService {
     return this.http
       .post(`${herokuUrl}/api/vids`, newVid, requestOptions);
   }
+  deleteVid(vid): any {
+    const token = localStorage.getItem('token');
+    const requestOptions = {
+      headers: new HttpHeaders({
+        Authorization: `Bearer ${token}`
+      }),
+    };
+    return this.http
+      .delete(`${herokuUrl}/api/vids/${vid.id}`, requestOptions);
+  }
 }
