@@ -20,10 +20,11 @@ export class UserService {
     this.http
       .post(`${herokuUrl}/auth/users/register`, newUser)
       .subscribe(response => console.log(response), err => console.log(err));
+    this.router.navigate(['']);
   }
 
   loginUser(user): void {
-    console.log(user);
+    console.log(user.email);
     this.http
       .post(`${herokuUrl}/auth/users/login`, user)
       .subscribe(response => {
@@ -33,6 +34,7 @@ export class UserService {
         console.log(response, token);
         this.currentUser = user.email;
         this.searchSubject.next(this.currentUser);
+        console.log(this.currentUser);
         this.router.navigate(['/vidmelibrary']);
       }, err => console.log(err));
   }
