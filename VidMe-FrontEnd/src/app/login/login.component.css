@@ -1,0 +1,11 @@
+.container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ba4990;
+  padding: 20px;
+  font-family: Bahnschrift, "Arial Black";
+  color: #f5f8f8;
+}

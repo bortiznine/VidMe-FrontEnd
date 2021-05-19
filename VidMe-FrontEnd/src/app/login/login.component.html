@@ -1,7 +1,9 @@
 <app-navbar></app-navbar>
+<div class="container">
 <form>
   <h2>Login a User</h2>
   <input [(ngModel)]="email" type="email" name="email" placeholder="email"/>
   <input [(ngModel)]="password" type="password" name="password" placeholder="Password"/>
   <input (click)="loginUser()" type="submit" value="Log In"/>
 </form>
+</div>
