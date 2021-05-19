@@ -21,7 +21,7 @@ background-size: 90vh;
     height: 100vh;
   padding: 0;
     margin:auto;
-  border: #f5f8f8 solid 2px;
+  /*border: #f5f8f8 solid 2px;*/
 }
 
 /*!* You can add global styles to this file, and also import other style files *!*/
@@ -35,3 +35,7 @@ background-size: 90vh;
 /*  padding:0;*/
 /*  margin:0;*/
 /*}*/
+img{
+  display: flex;
+  justify-content: center;
+}

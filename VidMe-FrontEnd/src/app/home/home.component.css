@@ -16,24 +16,28 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: red solid 1px;
+  border: #b826b8 solid 1px;
   width: 50vw;
   border-radius: 40px;
   background-color: #f5f8f8;
   /*opacity: 0.5;*/
   padding-bottom: 5px;
+  text-align: center;
+  height: inherit;
 }
 .login{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border: red solid 1px;
+  border: #b826b8 solid 1px;
   width: 50vw;
   border-radius: 40px;
   background-color: #f5f8f8;
   /*opacity: 0.5;*/
-
+  padding: 10px;
+text-align: center;
+  height: inherit;
 }
 .header{
   display: flex;
