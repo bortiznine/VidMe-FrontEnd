@@ -15,6 +15,7 @@ export class VidmelibraryComponent implements OnInit {
   public vid: any;
   public vidTitle: string;
   public vidurl: string;
+  public userName: string;
   constructor(private vidmeService: VidmeService, private route: ActivatedRoute) { }
 
   getVids(): any {
@@ -26,6 +27,7 @@ export class VidmelibraryComponent implements OnInit {
     const newVid = {
       title: this.vidTitle,
       vidurl: this.vidurl,
+      userName: this.userName,
     };
     this.vidmeService.createVid(newVid).subscribe(response => {
       this.vids = [...this.vids, response];

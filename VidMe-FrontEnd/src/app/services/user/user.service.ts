@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {BehaviorSubject} from 'rxjs';
 import {Router} from '@angular/router';
+import {NavbarComponent} from "../../navbar/navbar.component";
 
 const herokuUrl = 'https://frozen-island-43179.herokuapp.com';
 
@@ -43,6 +44,7 @@ export class UserService {
     localStorage.removeItem('currentUser');
     localStorage.removeItem('token');
     this.currentUser = '';
+    this.searchSubject.next(this.currentUser);
     this.router.navigate(['']);
   }
 }
