@@ -4,8 +4,35 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ba4990;
+  /*background-color: #ba4990;*/
   padding: 20px;
   font-family: Bahnschrift, "Arial Black";
   color: #f5f8f8;
+
+}
+.form{
+  background-color: #ba4990;
+  padding: 20px;
+}
+.filler{
+  /*width: 100vh;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /*background-image: url("src/assets/images/filler-picture.png");*/
+  background-size: 90vh;
+  /*background-color: #ba4990;*/
+  /*  height: 100vh;*/
+  padding: 10px;
+  margin:auto;
+  /*border: #f5f8f8 solid 2px;*/
+}
+.ideas{
+  background-color: #ba4990;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }

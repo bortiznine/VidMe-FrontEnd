@@ -1,9 +1,20 @@
 <app-navbar></app-navbar>
 <div class="container">
+  <div class="form">
 <form>
   <h2>Login a User</h2>
   <input [(ngModel)]="email" type="email" name="email" placeholder="email"/>
   <input [(ngModel)]="password" type="password" name="password" placeholder="Password"/>
   <input (click)="loginUser()" type="submit" value="Log In"/>
 </form>
+  </div>
+
+  <div class="filler">
+  <img src="assets/images/pink-thinker.gif" width="600">
+    <br>
+    <div class="ideas">
+  <h2>Ideas Are Brewing</h2>
+      <p>Why not share yours on the cloud! Log-in and see what items you can put and reach out to!</p>
+    </div>
+  </div>
 </div>
