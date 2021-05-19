@@ -1,24 +1,24 @@
 <app-navbar></app-navbar>
-<section>
-  <!--  <h2>Get All Categories for {{this.emailAddress}}</h2>-->
 
-</section>
+<section class="container">
 <h4>Create New Vid Item</h4>
 <form (submit)="createVid()">
   <input [(ngModel)]="vidTitle" name="vidTitle" type="text" placeholder="title" />
   <input [(ngModel)]="vidurl" name="vidURL" type="url" placeholder="vidUrl" />
   <input type="submit"/>
 </form>
-<div *ngIf="vids">
+</section>
 
+<section class="filler">
+<div *ngIf="vids">
   <h4>All Vid Items</h4>
   <ul>
     <li *ngFor="let vid of vids">
-
     {{vid.userName}} {{vid.title}} == {{vid.vidurl}}
       <button (click)="deleteVid(vid)">delete item</button>
 <!--        <input [(ngModel)]="recipeName" name="recipeName" type="text" placeholder="new recipe" />-->
     </li>
   </ul>
-
 </div>
+</section>
+
