@@ -1,5 +1,6 @@
 <app-navbar></app-navbar>
 <div class="container">
+  <div class="form">
 <form>
   <h2>Register a User</h2>
   <input [(ngModel)]="userName" type="text" name="userName" placeholder="User Name"/>
@@ -7,8 +8,10 @@
   <input [(ngModel)]="password" type="password" name="password" placeholder="Password"/>
   <input (click)="registerUser()" type="submit" value="Register" />
 </form>
+  </div>
+  <div class="filler">
+    <img src="assets/images/Vid-Me-Flyer.PNG" width="700" >
+  </div>
+
 </div>
 
-<div class="filler">
-<img src="assets/images/Vid-Me-Flyer.PNG" >
-</div>
