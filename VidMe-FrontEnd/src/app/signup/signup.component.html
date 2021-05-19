@@ -1,8 +1,14 @@
 <app-navbar></app-navbar>
+<div class="container">
 <form>
   <h2>Register a User</h2>
   <input [(ngModel)]="userName" type="text" name="userName" placeholder="User Name"/>
   <input [(ngModel)]="emailAddress" type="email" name="emailAddress" placeholder="Email Address"/>
   <input [(ngModel)]="password" type="password" name="password" placeholder="Password"/>
-  <input (click)="registerUser()" type="submit" value="Register"/>
+  <input (click)="registerUser()" type="submit" value="Register" />
 </form>
+
+</div>
+<div class="filler">
+  
+</div>
