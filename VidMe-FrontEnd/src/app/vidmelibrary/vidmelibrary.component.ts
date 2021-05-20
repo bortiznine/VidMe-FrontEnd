@@ -40,7 +40,7 @@ export class VidmelibraryComponent implements OnInit {
       vidurl: this.vidurl,
       userName: this.userName,
     };
-    this.isValidUrl(newVid.vidurl);
+    console.log(this.isValidUrl('www.google.com'));
     this.vidmeService.createVid(newVid).subscribe(response => {
       this.vids = [...this.vids, response];
     }, err => console.log(err));

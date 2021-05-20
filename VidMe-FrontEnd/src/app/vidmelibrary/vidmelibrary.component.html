@@ -22,8 +22,9 @@
   <section class="form">
 <h4>Create New Vid Item</h4>
 <form (submit)="createVid()" > <!--[formGroup]="urlForm"-->
-  <input [(ngModel)]="vidTitle" name="vidTitle" type="text" placeholder="title" />
-  <input [(ngModel)]="vidurl" name="vidURL" type="url" placeholder="vidUrl" [ngModelOptions]="{ updateOn: 'blur' }" #urlerror="ngModel" pattern="[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}(.[a-z]{2,4})?\b(/[-a-zA-Z0-9@:%_+.~#?&//=]*)?  " required />
+  <input [(ngModel)]="vidTitle" name="vidTitle" type="text" placeholder="Title" />
+  <input [(ngModel)]="vidurl" name="vidURL" type="url" placeholder="VidUrl" [ngModelOptions]="{ updateOn: 'blur' }" #urlerror="ngModel" pattern="https://.*" size="30"
+  required>
   <div *ngIf="urlerror.invalid && (urlerror.dirty || urlerror.touched)">
     <div *ngIf="urlerror.errors.required">
       <span style="background-color: red">URL is required </span>
