@@ -12,13 +12,17 @@
 <section class="filler">
 <div *ngIf="vids">
   <h4>All Vid Items</h4>
+</div>
+</section>
+<section class="items">
   <ul>
     <li *ngFor="let vid of vids">
+      <div class="vid-item">
     {{vid.userName}} {{vid.title}} == {{vid.vidurl}}
       <button (click)="deleteVid(vid)">delete item</button>
+      </div>
 <!--        <input [(ngModel)]="recipeName" name="recipeName" type="text" placeholder="new recipe" />-->
     </li>
   </ul>
-</div>
 </section>
 

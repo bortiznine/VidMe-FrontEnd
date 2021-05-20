@@ -3,6 +3,7 @@ import {VidmeService} from '../services/vidme/vidme.service';
 import {UserService} from '../services/user/user.service';
 import * as url from 'url';
 import {ActivatedRoute} from '@angular/router';
+import {HttpErrorResponse} from "@angular/common/http";
 declare const M;
 @Component({
   selector: 'app-vidmelibrary',
@@ -16,13 +17,16 @@ export class VidmelibraryComponent implements OnInit {
   public vidTitle: string;
   public vidurl: string;
   public userName: string;
-  constructor(private vidmeService: VidmeService, private route: ActivatedRoute) { }
+
+  constructor(private vidmeService: VidmeService, private route: ActivatedRoute) {
+  }
 
   getVids(): any {
     this.vidmeService.getVidMe().subscribe(response => {
       this.vids = response;
     }, err => console.log(err));
   }
+
   createVid(): any {
     const newVid = {
       title: this.vidTitle,
@@ -50,12 +54,20 @@ export class VidmelibraryComponent implements OnInit {
   }
 
   deleteVid(vid): any {
-    // @ts-ignore
-    const index = this.vids.indexOf(vid);
-    console.log(index);
-    this.vidmeService.deleteVid(vid).subscribe(() => {
+    // if (HttpErrorResponse error = 404) {
+    {
       // @ts-ignore
-      this.vids.splice(index, 1);
-    });
+      const index = this.vids.indexOf(vid);
+      console.log(index);
+      this.vidmeService.deleteVid(vid).subscribe(() => {
+        // @ts-ignore
+        this.vids.splice(index, 1);
+      });
+      //   }
+      //     else {
+      //       alert('Not the user to delete this item!');
+      //     }
+      // }
+    }
   }
 }
