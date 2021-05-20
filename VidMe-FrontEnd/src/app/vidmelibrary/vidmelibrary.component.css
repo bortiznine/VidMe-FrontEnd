@@ -30,9 +30,9 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #ba4990;
+  /*background-color: #ba4990;*/
   padding: 20px;
-  border: #f5f8f8 solid 2px;
+  /*border: #f5f8f8 solid 2px;*/
   color: #f5f8f8;
 }
 .vid-item{
@@ -46,6 +46,7 @@
   border: #f5f8f8 dashed 2px;
   color: #f5f8f8;
   margin-top: 20px;
+  border-radius: 100px;
 
 }
 .h5{
@@ -58,4 +59,34 @@
   display: flex;
   justify-content: center;
 }
+
+/*#cloud {*/
+/*  position: absolute;*/
+
+/*}*/
+/*#bottom_c {*/
+/*  position: relative; top: 200px; left: 500px;*/
+/*  width: 350px;*/
+/*  height: 150px;*/
+/*  background-color: #fff;*/
+/*  border-radius: 100px;*/
+/*  border: solid 5px black;*/
+/*  z-index: 100;*/
+/*}*/
+/*#right_c{*/
+/*  position: absolute; top: 140px; left: 640px;*/
+/*  width: 150px;*/
+/*  height: 150px;*/
+/*  border-radius: 100%;*/
+/*  background-color: #fff;*/
+/*  border: solid 5px black;*/
+/*}*/
+/*#left_c{*/
+/*  position: absolute; top: 170px; left: 550px;*/
+/*  width: 100px;*/
+/*  height: 100px;*/
+/*  border-radius: 100%;*/
+/*  background-color: #fff;*/
+/*  border: solid 5px black;*/
+/*}*/
 
