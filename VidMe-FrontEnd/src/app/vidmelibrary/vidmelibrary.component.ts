@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {VidmeService} from '../services/vidme/vidme.service';
-import {UserService} from '../services/user/user.service';
-import * as url from 'url';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ActivatedRoute} from '@angular/router';
-import {HttpErrorResponse} from "@angular/common/http";
+
 declare const M;
 @Component({
   selector: 'app-vidmelibrary',
@@ -17,8 +16,16 @@ export class VidmelibraryComponent implements OnInit {
   public vidTitle: string;
   public vidurl: string;
   public userName: string;
+  public urlRegex =  '[-a-zA-Z0-9@:%_+.~#?&//=]{2,256}(.[a-z]{2,4})?\b(/[-a-zA-Z0-9@:%_+.~#?&//=]*)?';
+  public urlForm: FormGroup;
 
   constructor(private vidmeService: VidmeService, private route: ActivatedRoute) {
+    this.urlForm = new FormGroup({
+      url: new FormControl('', {
+        validators: [Validators.required, Validators.pattern(this.urlRegex)],
+        updateOn: 'blur',
+      }),
+    });
   }
 
   getVids(): any {
@@ -33,6 +40,7 @@ export class VidmelibraryComponent implements OnInit {
       vidurl: this.vidurl,
       userName: this.userName,
     };
+    this.isValidUrl(newVid.vidurl);
     this.vidmeService.createVid(newVid).subscribe(response => {
       this.vids = [...this.vids, response];
     }, err => console.log(err));
@@ -54,20 +62,40 @@ export class VidmelibraryComponent implements OnInit {
   }
 
   deleteVid(vid): any {
-    // if (HttpErrorResponse error = 404) {
     {
       // @ts-ignore
       const index = this.vids.indexOf(vid);
       console.log(index);
-      this.vidmeService.deleteVid(vid).subscribe(() => {
-        // @ts-ignore
-        this.vids.splice(index, 1);
-      });
-      //   }
-      //     else {
-      //       alert('Not the user to delete this item!');
-      //     }
-      // }
+      this.vidmeService.deleteVid(vid).subscribe(res => {
+          // @ts-ignore
+          this.vids.splice(index, 1);
+          console.log(res);
+        },
+        err => {
+          console.log(err);
+          alert('Cannot Delete Other Users Items!');
+        });
+    }
+    // else {
+    //   alert('Not the user to delete this item!');
+    // }
+//   windowError(vid){
+//     window.onerror{
+//       var message = "Can't delete others Items";
+// alert(message);
+//     }
+//   }
+  }
+  public isValidUrl(urlString: string): boolean {
+    try {
+      let pattern = new RegExp(this.urlRegex);
+      let valid = pattern.test(urlString);
+      return valid;
+    } catch (TypeError) {
+      return false;
     }
   }
+// console.log(this.isValidUrl('https://www.google.com')); // true
+// console.log(this.isValidUrl('google')); // false
 }
+

@@ -1,12 +1,12 @@
 .container {
-  width: 100vw;
+  width: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   /*background-color: #ba4990;*/
   padding-top: 20px;
-  padding-bottom: 20px;
+  /*padding-bottom: 20px;*/
   font-family: Bahnschrift, "Arial Black";
   color: #b826b8;
   /*border: #f5f8f8 double 2px;*/
@@ -17,13 +17,14 @@
   align-items: center;
   flex-direction: column;
   border: #b826b8 solid 1px;
-  width: 50vw;
+  width: inherit;
   border-radius: 40px;
   background-color: #f5f8f8;
   /*opacity: 0.5;*/
   padding-bottom: 5px;
   text-align: center;
   height: inherit;
+  margin: 20px;
 }
 .login{
   display: flex;
@@ -31,7 +32,7 @@
   align-items: center;
   flex-direction: column;
   border: #b826b8 solid 1px;
-  width: 50vw;
+  width: inherit;
   border-radius: 40px;
   background-color: #f5f8f8;
   /*opacity: 0.5;*/
@@ -48,10 +49,18 @@ text-align: center;
   color: #b826b8;
   background-color: #f5f8f8;
   opacity: 0.5;
-  border-radius: 40px;
+  /*border-radius: 40px;*/
 }
 p{
   padding-right: 5px;
   padding-left: 5px;
 
+}
+.image-holder{
+  display: flex;
+  flex-direction: column;
+
+}
+.quote{
+  font-style: italic;
 }
