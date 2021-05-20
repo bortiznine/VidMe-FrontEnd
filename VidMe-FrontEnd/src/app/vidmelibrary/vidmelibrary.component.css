@@ -46,3 +46,9 @@
   border: #f5f8f8 dashed 2px;
   color: #f5f8f8;
 }
+.h5{
+  color: #f5f8f8;
+}
+.username{
+  font-style: italic;
+}

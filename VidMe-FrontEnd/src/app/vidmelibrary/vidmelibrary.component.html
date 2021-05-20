@@ -1,5 +1,23 @@
 <app-navbar></app-navbar>
-
+<head>
+  <style>
+    a {
+      text-decoration: none;
+    }
+    a:link {
+      color: #ffffff;
+      border-bottom: 1px solid #d87fe7;
+    }
+    a:visited {
+      color: lightgrey;
+      border-bottom: 1px solid #000000;
+    }
+    a:hover {
+      color: rgba(255, 255, 255, 0.51);
+      border-bottom: 1px solid #000099;
+    }
+  </style>
+</head>
 <section class="container">
 <h4>Create New Vid Item</h4>
 <form (submit)="createVid()">
@@ -11,18 +29,20 @@
 
 <section class="filler">
 <div *ngIf="vids">
-  <h4>All Vid Items</h4>
+  <h2>All Vid Items</h2>
 </div>
 </section>
 <section class="items">
   <ul>
     <li *ngFor="let vid of vids">
       <div class="vid-item">
-        <h3>{{vid.userName}}</h3> <h4>{{vid.title}}</h4> <a href="{{vid.vidurl}}"> {{vid.vidurl}}</a>
+        <h3 class="username">{{vid.userName}}</h3> <h4>{{vid.title}}</h4> <a href="{{vid.vidurl}}"> <h5>{{vid.vidurl}}</h5></a>
       <button (click)="deleteVid(vid)">delete item</button>
       </div>
 <!--        <input [(ngModel)]="recipeName" name="recipeName" type="text" placeholder="new recipe" />-->
     </li>
   </ul>
 </section>
-
+<a class="preview" *ngFor="let linkData of vids" [href]="linkData.url">
+  <img [src]="linkData.image" />
+</a>
