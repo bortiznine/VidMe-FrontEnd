@@ -2,13 +2,13 @@
   "name": "vid-me-front-end",
   "version": "0.0.0",
   "scripts": {
-    "ng": "VidMe-FrontEnd/node_modules/.bin/ng",
-    "start": "VidMe-FrontEnd/node_modules/.bin/ng serve",
-    "build": "VidMe-FrontEnd/node_modules/.bin/ng build",
-    "test": "VidMe-FrontEnd/node_modules/.bin/ng test",
-    "lint": "VidMe-FrontEnd/node_modules/.bin/ng lint",
-    "e2e": "VidMe-FrontEnd/node_modules/.bin/ng e2e",
-    "heroku-postbuild": "VidMe-FrontEnd/node_modules/.bin/ng build --prod"
+    "ng": "node_modules/.bin/ng",
+    "start": "node_modules/.bin/ng serve",
+    "build": "node_modules/.bin/ng build",
+    "test": "node_modules/.bin/ng test",
+    "lint": "node_modules/.bin/ng lint",
+    "e2e": "node_modules/.bin/ng e2e",
+    "heroku-postbuild": "node_modules/.bin/ng build --prod"
   },
   "private": true,
   "dependencies": {
