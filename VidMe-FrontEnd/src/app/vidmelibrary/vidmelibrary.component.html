@@ -36,7 +36,13 @@
   <ul>
     <li *ngFor="let vid of vids">
       <div class="vid-item">
-        <h3 class="username">{{vid.userName}}</h3> <h4>{{vid.title}}</h4> <a href="{{vid.vidurl}}"> <h5>{{vid.vidurl}}</h5></a>
+        <h3 class="username">{{vid.userName}}</h3> <h4>{{vid.title}}</h4>
+        <a href="{{vid.vidurl}}">
+          <div class="image-holder">
+        <img src="assets/images/video-play.jpeg" width="100" height="100" >
+          </div>
+            <h5>{{vid.vidurl}}</h5>
+      </a>
       <button (click)="deleteVid(vid)">delete item</button>
       </div>
 <!--        <input [(ngModel)]="recipeName" name="recipeName" type="text" placeholder="new recipe" />-->

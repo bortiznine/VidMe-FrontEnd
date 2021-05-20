@@ -46,6 +46,7 @@
   border: #f5f8f8 dashed 2px;
   color: #f5f8f8;
   margin-top: 20px;
+
 }
 .h5{
   color: #f5f8f8;
@@ -53,3 +54,8 @@
 .username{
   font-style: italic;
 }
+.image-holder{
+  display: flex;
+  justify-content: center;
+}
+
