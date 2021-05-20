@@ -10,6 +10,7 @@
   color: #f5f8f8;
   border: #f5f8f8 solid 2px;
   border-radius: 40px;
+  /*opacity: 0.8;*/
 }
 .filler {
   width: fit-content;
@@ -42,6 +43,6 @@
   flex-direction: column;
   background-color: #ba4990;
   padding: 20px;
-  border: #f5f8f8 solid 2px;
+  border: #f5f8f8 dashed 2px;
   color: #f5f8f8;
 }

@@ -18,7 +18,7 @@
   <ul>
     <li *ngFor="let vid of vids">
       <div class="vid-item">
-    {{vid.userName}} {{vid.title}} == {{vid.vidurl}}
+        <h3>{{vid.userName}}</h3> <h4>{{vid.title}}</h4> <a href="{{vid.vidurl}}"> {{vid.vidurl}}</a>
       <button (click)="deleteVid(vid)">delete item</button>
       </div>
 <!--        <input [(ngModel)]="recipeName" name="recipeName" type="text" placeholder="new recipe" />-->
