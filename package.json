@@ -2,14 +2,15 @@
   "name": "vid-me-front-end",
   "version": "0.0.0",
   "scripts": {
-    "ng": "node_modules/.bin/ng",
-    "start": "node_modules/.bin/ng serve",
-    "build": "node_modules/.bin/ng build",
-    "test": "node_modules/.bin/ng test",
-    "lint": "node_modules/.bin/ng lint",
-    "e2e": "node_modules/.bin/ng e2e",
-    "heroku-postbuild": "node_modules/.bin/ng build --prod"
+    "ng": "ng",
+    "start": "node server.js",
+    "build": "ng build",
+    "test": "ng test",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "heroku-postbuild": "ng build --prod"
   },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "~11.2.11",
